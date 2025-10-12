@@ -69,7 +69,6 @@ export default function AdminProductPage() {
 	}, [isLoading]);
 
 
-
 	return (
 		<div className="w-full min-h-full">
 			{

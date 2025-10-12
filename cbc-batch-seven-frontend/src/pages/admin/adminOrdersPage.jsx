@@ -36,8 +36,7 @@ export default function AdminOrdersPage() {
 		}		
 	}, [isLoading]);
 
-
-
+	
 	return (
 		<div className="w-full min-h-full">
             <OrderModal isModalOpen={isModalOpen} closeModal={() => setIsModalOpen(false)} selectedOrder={selectedOrder} refresh={()=>{setIsLoading(true)}}/>
