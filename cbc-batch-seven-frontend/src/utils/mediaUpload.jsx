@@ -1,11 +1,21 @@
 import { createClient } from "@supabase/supabase-js";
 
-const anonKey =
-	"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpqeXZzY2NxZHZ6bXNvb3RldnVmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTYxMjg3ODIsImV4cCI6MjA3MTcwNDc4Mn0._UROOdpCU5IlFtwVP8kNktFlXUfo3QU_YwihNh7HQZA";
-const supabaseUrl = "https://jjyvsccqdvzmsootevuf.supabase.co";
+const anonkey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZraHdvenR0cXZldXlrd2xpbGZzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA0NjY3NTUsImV4cCI6MjA3NjA0Mjc1NX0.E-IeubnhxZhJIpc5XBP3jlPqXgF52sk82Sq3TyLk5kM"
+const supabaseUrl = "https://fkhwozttqveuykwlilfs.supabase.co"
 
-const supabase = createClient(supabaseUrl, anonKey);
+const supabase = createClient(supabaseUrl, anonkey)
 
+
+/*	supabase.storage.from("images").upload("public/"+file.name,file,{
+			cacheControl:"3600",
+			upsert:false,
+		}).then(
+			()=>{
+				const publicUrl = supabase.storage.from("images").getPublicUrl(file.name).data.publicUrl
+				console.log(publicUrl);
+			}
+		)
+*/ 
 
 export default function mediaUpload(file) {
 	return new Promise((resolve, reject) => {
