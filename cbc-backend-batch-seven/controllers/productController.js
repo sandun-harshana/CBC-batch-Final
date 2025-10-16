@@ -2,7 +2,7 @@ import Product from "../models/product.js";
 import { isAdmin } from "./userController.js";
 
 export async function createProduct(req, res) {
-
+    
     if(!isAdmin(req)){
         res.status(403).json({
             message: "You are not authorized to create a product"
